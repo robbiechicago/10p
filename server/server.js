@@ -37,6 +37,8 @@ app.use(passport.session());
 // app.use(flash());
 
 //LOCAL
+var where_am_i = window.location.href;
+console.log(where_am_i)
 // mongoose.connect('mongodb://localhost/tPs');
 // mongoose.connect('mongodb://localhost/tenp');
 //REMOTE (CHANGE THIS! NEW USER AND PWD, AND DON'T SHOW THE PWD!)
