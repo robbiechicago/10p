@@ -19,7 +19,7 @@ function commonFunctions($q, $http, seasonsService){
       var defer = $q.defer();
       var req = {
         method: method.toUpperCase(),
-        url: 'http://localhost:3000/' + url,
+        url: 'http://ec2-52-33-185-209.us-west-2.compute.amazonaws.com:3000/' + url,
         headers: {
           'Content-Type': 'application/json'
         },
