@@ -38,9 +38,9 @@ app.use(passport.session());
 
 //LOCAL
 // mongoose.connect('mongodb://localhost/tPs');
-mongoose.connect('mongodb://localhost/tenp');
+// mongoose.connect('mongodb://localhost/tenp');
 //REMOTE (CHANGE THIS! NEW USER AND PWD, AND DON'T SHOW THE PWD!)
-// mongoose.connect('mongodb://bert:g7je6vPPx9shTGed@ec2-52-33-185-209.us-west-2.compute.amazonaws.com:27017/tenp');
+mongoose.connect('mongodb://bert:g7je6vPPx9shTGed@ec2-52-33-185-209.us-west-2.compute.amazonaws.com:27017/tenp');
 require('./config/passport')(passport);
 var routes = require('./config/routes')
 app.use(routes);
