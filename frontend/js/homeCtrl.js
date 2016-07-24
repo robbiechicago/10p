@@ -90,6 +90,27 @@ function homeCtrl($scope, $state, commonFunctions, gamesService, seasonsService,
     }
   }
 
+  self.new_season = new_season;
+  function new_season(season) {
+    // var f_sat = Date.parse(season.first);
+    var f_sat = new Date(season.first);
+    console.log(season.first)
+    console.log(f_sat);
+
+    var l_sat = new Date(season.last);
+    console.log(season.last)
+    console.log(l_sat);
+
+    var season_obj = {
+      season: season.name,
+      date_of_first_saturday_fixture: f_sat,
+      date_of_last_saturday_fixture:l_sat
+    }
+    commonFunctions.api_call('post', 'seasons', season_obj).then(function() {
+      console.log('hello!')
+    })
+  }
+
   self.goTest = goTest;
   function goTest() {
     $state.go('test');

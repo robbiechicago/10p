@@ -11,6 +11,19 @@
 <p>The current season is: <span ng-if="hc.season.close_season">Close season heading into </span>{{ hc.season.season.season }}</p>
 <p>The current week is {{ hc.current_week }}</p>
 
+<div>
+  <h1>Create a season</h1>
+  <form>
+    <label for="new_season">Season name</label>
+    <input ng-model="seas.name" type="text" name="new_season">
+    <label for="first_sat">First Sat Fixture</label>
+    <input ng-model="seas.first" type="text" name="first_sat">
+    <label for="last_sat">Last Sat Fixture</label>
+    <input ng-model="seas.last" type="text" name="last_sat">
+    <input type="submit" name="seas-submit" ng-click="hc.new_season(seas)">
+  </form>
+</div>
+
 <div ng-controller="userCtrl as uc">
   <h1>Register</h1>
   <form>
